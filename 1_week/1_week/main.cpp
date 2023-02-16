@@ -31,7 +31,7 @@ private:
 };
 
 int main(int argc, const char * argv[]) {
-    Timer<std::chrono::nanoseconds> t;
+    Timer<std::chrono::microseconds> t;
     auto count = 0;
     t.start();
     for (auto i = 0; i < 100000000; i++) {
@@ -41,7 +41,7 @@ int main(int argc, const char * argv[]) {
     for (auto i = 0; i < 100000000; i++) {
         count += sin(i) + cos(i);
     }
-//    t.start();
+    t.start();
     for (auto i = 0; i < 100000000; i++) {
         count += sin(i) + cos(i);
     }
